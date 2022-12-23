@@ -25,6 +25,9 @@ const checkEverything = () => {
 	if (percentCustom.value > 0) {
 		selectedValue = percentCustom.value;
 	}
+	if (people.value == 0) {
+		people.parentElement.classList.toggle("no-input");
+	}
 	peopleValue = Number(people.value);
 	if (bill.value > 0 && people.value > 0 && selectedValue > 0) {
 		//create tip for bill

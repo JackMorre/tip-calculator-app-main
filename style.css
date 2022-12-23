@@ -219,7 +219,8 @@ input:checked + .radio-tile {
 	display: none;
 }
 
-.no-input input {
+.no-input input,
+.no-input input:focus {
 	border: 2px solid red;
 }
 
