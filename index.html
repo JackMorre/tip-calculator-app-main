@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>Frontend Mentor | Tip calculator app</title>
+		<link
+			rel="stylesheet"
+			href="/style.css"
+		/>
+	</head>
+	<body>
+		<img
+			class="logo"
+			src="/images/logo.svg"
+			alt="lofo for calculator"
+		/>
+		<main class="calculator">
+			<div class="info-container">
+				<div class="bill-container">
+					<h2 class="title">Bill</h2>
+					<input
+						class="bill"
+						type="text"
+						oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+						placeholder="0"
+					/>
+				</div>
+				<div class="percent-container">
+					<h2 class="title">Select Tip %</h2>
+					<div class="radio-tile-group">
+						<div class="input-container">
+							<input
+								id="five"
+								type="radio"
+								name="percentage"
+								value="5"
+							/>
+							<div class="radio-tile">
+								<label for="five">5%</label>
+							</div>
+						</div>
+						<div class="input-container">
+							<input
+								id="ten"
+								type="radio"
+								name="percentage"
+								value="10"
+							/>
+							<div class="radio-tile">
+								<label for="ten">10%</label>
+							</div>
+						</div>
+						<div class="input-container">
+							<input
+								id="fifteen"
+								type="radio"
+								name="percentage"
+								value="15"
+							/>
+							<div class="radio-tile">
+								<label for="fifteen">15%</label>
+							</div>
+						</div>
+						<div class="input-container">
+							<input
+								id="twenty-five"
+								type="radio"
+								name="percentage"
+								value="25"
+							/>
+							<div class="radio-tile">
+								<label for="twenty-five">25%</label>
+							</div>
+						</div>
+						<div class="input-container">
+							<input
+								id="fifty"
+								type="radio"
+								name="percentage"
+								value="50"
+							/>
+							<div class="radio-tile">
+								<label for="fifty">50%</label>
+							</div>
+						</div>
+						<div class="input-container">
+							<input
+								type="text"
+								class="custom"
+								oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+								placeholder="Custom"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="number-people-container">
+					<div class="title-container">
+						<h2 class="title">Number of People</h2>
+						<h2 class="title red">Can't Be Zero</h2>
+					</div>
+
+					<input
+						class="number-people"
+						type="text"
+						oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+						placeholder="0"
+					/>
+				</div>
+			</div>
+			<div class="final-container">
+				<div class="tip-container">
+					<div class="tip-text-container">
+						<h3 class="subtitle">Tip Amount</h3>
+						<p class="text">/ person</p>
+					</div>
+					<h1 class="tip-price">0.00</h1>
+				</div>
+				<div class="tip-container margin-b-auto">
+					<div class="tip-text-container">
+						<h3 class="subtitle">Total</h3>
+						<p class="text">/ person</p>
+					</div>
+					<h1 class="tip-price total">0.00</h1>
+				</div>
+				<button class="reset">Reset</button>
+			</div>
+		</main>
+		<script src="/script.js"></script>
+	</body>
+</html>
